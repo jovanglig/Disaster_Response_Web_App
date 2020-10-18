@@ -1,5 +1,10 @@
 # Disaster Response Pipeline Project
 
+### Udacity Project
+This repo contains files that pertain to the Disaster Response Pipeline Project from Udacity's Data Scientist Nanodegree programme.
+
+
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
