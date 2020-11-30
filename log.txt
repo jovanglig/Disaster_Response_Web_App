@@ -1,0 +1,103 @@
+2020-11-30T09:37:47.800314+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+2020-11-30T09:37:47.800315+00:00 app[web.1]: return util.import_app(self.app_uri)
+2020-11-30T09:37:47.800315+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+2020-11-30T09:37:47.800315+00:00 app[web.1]: mod = importlib.import_module(module)
+2020-11-30T09:37:47.800316+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+2020-11-30T09:37:47.800317+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2020-11-30T09:37:47.800317+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+2020-11-30T09:37:47.800317+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+2020-11-30T09:37:47.800318+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+2020-11-30T09:37:47.800318+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+2020-11-30T09:37:47.800319+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+2020-11-30T09:37:47.800319+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+2020-11-30T09:37:47.800319+00:00 app[web.1]: File "/app/run.py", line 1, in <module>
+2020-11-30T09:37:47.800320+00:00 app[web.1]: from app import app
+2020-11-30T09:37:47.800320+00:00 app[web.1]: File "/app/app/__init__.py", line 12, in <module>
+2020-11-30T09:37:47.800321+00:00 app[web.1]: from app import run
+2020-11-30T09:37:47.800321+00:00 app[web.1]: File "/app/app/run.py", line 32, in <module>
+2020-11-30T09:37:47.800321+00:00 app[web.1]: df = pd.read_sql_table('messages', engine)
+2020-11-30T09:37:47.800322+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/pandas/io/sql.py", line 269, in read_sql_table
+2020-11-30T09:37:47.800322+00:00 app[web.1]: meta.reflect(only=[table_name], views=True)
+2020-11-30T09:37:47.800330+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/sql/schema.py", line 4448, in reflect
+2020-11-30T09:37:47.800330+00:00 app[web.1]: with bind.connect() as conn:
+2020-11-30T09:37:47.800340+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2263, in connect
+2020-11-30T09:37:47.800340+00:00 app[web.1]: return self._connection_cls(self, **kwargs)
+2020-11-30T09:37:47.800340+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 104, in __init__
+2020-11-30T09:37:47.800340+00:00 app[web.1]: else engine.raw_connection()
+2020-11-30T09:37:47.800341+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2370, in raw_connection
+2020-11-30T09:37:47.800341+00:00 app[web.1]: self.pool.unique_connection, _connection
+2020-11-30T09:37:47.800342+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2340, in _wrap_pool_connect
+2020-11-30T09:37:47.800342+00:00 app[web.1]: e, dialect, self
+2020-11-30T09:37:47.800343+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1584, in _handle_dbapi_exception_noconnection
+2020-11-30T09:37:47.800343+00:00 app[web.1]: sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+2020-11-30T09:37:47.800343+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+2020-11-30T09:37:47.800344+00:00 app[web.1]: raise exception
+2020-11-30T09:37:47.800344+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+2020-11-30T09:37:47.800344+00:00 app[web.1]: return fn()
+2020-11-30T09:37:47.800345+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+2020-11-30T09:37:47.800345+00:00 app[web.1]: return _ConnectionFairy._checkout(self)
+2020-11-30T09:37:47.800345+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+2020-11-30T09:37:47.800346+00:00 app[web.1]: fairy = _ConnectionRecord.checkout(pool)
+2020-11-30T09:37:47.800346+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+2020-11-30T09:37:47.800347+00:00 app[web.1]: rec = pool._do_get()
+2020-11-30T09:37:47.800347+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 241, in _do_get
+2020-11-30T09:37:47.800347+00:00 app[web.1]: return self._create_connection()
+2020-11-30T09:37:47.800347+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+2020-11-30T09:37:47.800348+00:00 app[web.1]: return _ConnectionRecord(self)
+2020-11-30T09:37:47.800348+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+2020-11-30T09:37:47.800348+00:00 app[web.1]: self.__connect(first_connect_check=True)
+2020-11-30T09:37:47.800349+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+2020-11-30T09:37:47.800349+00:00 app[web.1]: pool.logger.debug("Error on connect(): %s", e)
+2020-11-30T09:37:47.800349+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+2020-11-30T09:37:47.800350+00:00 app[web.1]: with_traceback=exc_tb,
+2020-11-30T09:37:47.800350+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+2020-11-30T09:37:47.800350+00:00 app[web.1]: raise exception
+2020-11-30T09:37:47.800350+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+2020-11-30T09:37:47.800351+00:00 app[web.1]: connection = pool._invoke_creator(self)
+2020-11-30T09:37:47.800351+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+2020-11-30T09:37:47.800351+00:00 app[web.1]: return dialect.connect(*cargs, **cparams)
+2020-11-30T09:37:47.800352+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+2020-11-30T09:37:47.800352+00:00 app[web.1]: return self.dbapi.connect(*cargs, **cparams)
+2020-11-30T09:37:47.800352+00:00 app[web.1]: sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+2020-11-30T09:37:47.800353+00:00 app[web.1]: (Background on this error at: http://sqlalche.me/e/13/e3q8)
+2020-11-30T09:37:47.801826+00:00 app[web.1]: [2020-11-30 09:37:47 +0000] [11] [INFO] Worker exiting (pid: 11)
+2020-11-30T09:37:48.083314+00:00 app[web.1]: Traceback (most recent call last):
+2020-11-30T09:37:48.083328+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 209, in run
+2020-11-30T09:37:48.083750+00:00 app[web.1]: self.sleep()
+2020-11-30T09:37:48.083771+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 357, in sleep
+2020-11-30T09:37:48.084098+00:00 app[web.1]: ready = select.select([self.PIPE[0]], [], [], 1.0)
+2020-11-30T09:37:48.084102+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2020-11-30T09:37:48.084354+00:00 app[web.1]: self.reap_workers()
+2020-11-30T09:37:48.084379+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2020-11-30T09:37:48.084844+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2020-11-30T09:37:48.084898+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2020-11-30T09:37:48.084911+00:00 app[web.1]: 
+2020-11-30T09:37:48.084912+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2020-11-30T09:37:48.084912+00:00 app[web.1]: 
+2020-11-30T09:37:48.084931+00:00 app[web.1]: Traceback (most recent call last):
+2020-11-30T09:37:48.084958+00:00 app[web.1]: File "/app/.heroku/python/bin/gunicorn", line 8, in <module>
+2020-11-30T09:37:48.085129+00:00 app[web.1]: sys.exit(run())
+2020-11-30T09:37:48.085151+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in run
+2020-11-30T09:37:48.085354+00:00 app[web.1]: WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2020-11-30T09:37:48.085374+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 228, in run
+2020-11-30T09:37:48.085652+00:00 app[web.1]: super().run()
+2020-11-30T09:37:48.085709+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 72, in run
+2020-11-30T09:37:48.085927+00:00 app[web.1]: Arbiter(self).run()
+2020-11-30T09:37:48.085930+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 229, in run
+2020-11-30T09:37:48.086180+00:00 app[web.1]: self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2020-11-30T09:37:48.086185+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 342, in halt
+2020-11-30T09:37:48.086624+00:00 app[web.1]: self.stop()
+2020-11-30T09:37:48.086627+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 393, in stop
+2020-11-30T09:37:48.086862+00:00 app[web.1]: time.sleep(0.1)
+2020-11-30T09:37:48.086884+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2020-11-30T09:37:48.087162+00:00 app[web.1]: self.reap_workers()
+2020-11-30T09:37:48.087183+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2020-11-30T09:37:48.087608+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2020-11-30T09:37:48.087642+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2020-11-30T09:37:48.169710+00:00 heroku[web.1]: Process exited with status 1
+2020-11-30T09:37:48.200313+00:00 heroku[web.1]: State changed from up to crashed
+2020-11-30T09:44:11.311742+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=emergency-webapp.herokuapp.com request_id=6766e789-73b6-46b6-a766-15adbfe41dc7 fwd="213.93.48.86" dyno= connect= service= status=503 bytes= protocol=https
+2020-11-30T09:44:11.563480+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=emergency-webapp.herokuapp.com request_id=5627796b-de00-4595-b586-624088a9ef4c fwd="213.93.48.86" dyno= connect= service= status=503 bytes= protocol=https
+Terminate batch job (Y/N)? 
+Terminate batch job (Y/N)? ls
+Terminate batch job (Y/N)? y
