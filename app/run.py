@@ -6,6 +6,7 @@ import pandas as pd
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 
+<<<<<<< HEAD
 
 from flask import render_template, request
 from plotly.graph_objs import Bar, Pie
@@ -14,6 +15,17 @@ import joblib
 from app import app
 
 
+=======
+from flask import Flask
+from flask import render_template, request, jsonify
+from plotly.graph_objs import Bar, Pie
+from sklearn.externals import joblib
+from sqlalchemy import create_engine
+
+
+app = Flask(__name__)
+
+>>>>>>> 01f921e5fb56693c4c7389f266efb432eb094cd2
 def tokenize(text):
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
@@ -164,9 +176,18 @@ def go():
     )
 
 
+<<<<<<< HEAD
 #def main():
  #   app.run(host='0.0.0.0', port=3001, debug=True)
 
 
 #if __name__ == '__main__':
 #    main()
+=======
+def main():
+    app.run(host='0.0.0.0', port=3001, debug=True)
+
+
+if __name__ == '__main__':
+    main()
+>>>>>>> 01f921e5fb56693c4c7389f266efb432eb094cd2
