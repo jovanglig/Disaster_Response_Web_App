@@ -1,5 +1,5 @@
-./pyvenv.cfg 
-./Lib/site-packages 
-./Scripts 
-./etc/jupyter/nbconfig/notebook.d 
-./share/jupyter/nbextensions/plotlywidget
+pyvenv.cfg 
+/Lib/site-packages 
+/Scripts 
+/etc/jupyter/nbconfig/notebook.d 
+/share/jupyter/nbextensions/plotlywidget
